@@ -11,3 +11,4 @@ for i in range(4):
   thomasH.forward(100)  
   thomasH.left(90)      
 
+thomasH.screen.exitOnClick()
