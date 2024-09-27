@@ -1,3 +1,8 @@
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
+thislist[1:3] = ["blackcurrant", "watermelon", "carey"]
+print(thislist)
+
+
 # l1 = ["eat", "sleep", "repeat"]
 
 # # printing the tuples in object directly
