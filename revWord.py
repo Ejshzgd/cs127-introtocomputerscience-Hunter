@@ -14,3 +14,4 @@ for i in range(len(ogWord) , 0 , -1):
     revWord = ogWord[i-1:i]
     print(revWord , " " , revWord)
 print("  ")
+print("  ")
