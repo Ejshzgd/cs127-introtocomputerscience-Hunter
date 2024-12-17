@@ -9,7 +9,7 @@
 import turtle
 
 carey = turtle.Turtle() 
-turtle.colormode(255)
+
 
 for i in range(90,0,-2):
     carey.forward(25)
