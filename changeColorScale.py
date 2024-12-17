@@ -19,32 +19,18 @@ mapShape = elevations.shape + (3,)
 #Create a blank image that's all zeros:
 floodMap = np.zeros(mapShape)
 
+amountBlue = float(input("How blue is the ocean:  "))
+outFile = input("What is the output file:  ")
+
 for row in range(mapShape[0]):
     for col in range(mapShape[1]):
-        if elevations[row,col] <= 0:
-            #Below sea level
-           floodMap[row,col,2] = 1.0     #Set the blue channel to 100%
-        elif elevations[row,col] <= 6:
-            #Below the storm surge of Hurricane Sandy (flooding likely)
-           floodMap[row,col,0] = 1.0     #Set the red channel to 100%
-        elif elevations[row,col] <= 20:
-            #Above 6 feet, but less than or equal 20 feet
-            floodMap[row,col,0] = 0.5    #Set the red channel to 50%
-            floodMap[row,col,1] = 0.5    #Set the green channel to 50%
-            floodMap[row,col,2] = 0.5    #Set the blue channel to 50%
+        if elevations[row][col] <= 0:
+            floodMap[row,col,0:2] = 0
+            floodMap[row,col,2] = amountBlue
+        elif elevations[row][col] % 10 == 0:
+            floodMap[row,col,:] = 0
         else:
-            #Above the 6 foot storm surge and didn't flood
-            floodMap[row,col,1] = 1.0   #Set the green channel to 100%
-
-
-# for row in range(mapShape[0]):
-#     for col in range(mapShape[1]):
-#         if elevations[row,col] <= 20:
-#             #Above 6 feet, but less than or equal 20 feet
-#             floodMap[row,col,0] = 0.5    #Set the red channel to 50%
-#             floodMap[row,col,1] = 0.5    #Set the green channel to 50%
-#             floodMap[row,col,2] = 0.5    #Set the blue channel to 50%
-
+            floodMap[row,col,:] = 1
 
 
 # Load the flood map image into matplotlib.pyplot:
@@ -54,4 +40,6 @@ plt.imshow(floodMap)
 plt.show()
 
 #Save the image:
-plt.imsave('floodMap.png', floodMap)
+plt.imsave(outFile, floodMap)
+
+print("Thank you for using my program!" + "\n" + "Your map is stored " + outFile)
