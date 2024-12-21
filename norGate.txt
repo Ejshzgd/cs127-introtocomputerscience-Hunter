@@ -1,0 +1,19 @@
+#Name: Carey Jiang
+#Email: carey.jiang65@myhunter.cuny.edu
+#Date: November 5, 2024
+#This programs creates a norgate
+
+
+(False)
+------|
+      |
+  0   |------------------------|
+----- |                        |
+                               |        -------
+                               ------>  | OR  | ----------> OUTPUT (False)
+------|                        |----->  |---- |
+      |                        |
+  0   |-------------------------
+----- |
+(False)
+

@@ -15,7 +15,7 @@ decNum = 0
 
 for i in binString:
     decNum = decNum*2
-    if i == 1:
+    if i == "1":
         decNum = decNum + 1
 
 print("Your number in decimal is " , decNum)

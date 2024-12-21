@@ -1,0 +1,27 @@
+#Name: Carey Jiang
+#Email: carey.jiang65@myhunter.cuny.edu
+#Date: November 5, 2024
+#Write a logical expression that is equivalent to the circuit that computes the majority of 3 inputs, called in1, in2, in3:
+
+------> If two or more of the inputs are True, then your expression should evaluate to True.
+------> Otherwise (two or more of the inputs are False), then your expression should evaluate to False.
+
+
+
+(False)
+------|
+      |-----------------------
+  0   |                      |----> |----|
+----- |----------------             |AND |--------|
+                     |         |--> |----|        |
+         |-----------|----------                  |
+------|  |           |                            |   |---
+      | --           |------------>|----|         --> |OR |
+  0   | --------------             |AND |-----------> |--_|-------------> |---|
+(False)              |     ------> |----|                                 |OR | ----------->OUTPUT (FALSE)
+                     |     |                                        |-->  |---|
+                     |     |                                        |
+------|              |-----|------>  |---|                          |
+      | --------------------         |AND|---------------------------
+  0   | ---------------------------> |---|
+(False)

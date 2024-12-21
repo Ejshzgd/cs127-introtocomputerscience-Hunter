@@ -1,0 +1,18 @@
+#Name: Carey Jiang
+#Email: carey.jiang65@myhunter.cuny.edu
+#Date: December 18, 2024
+#The programs Write a Bash script that makes a new directory called projectFiles , enters the directory, then creates three more subdirectories titled source, data, and results.
+
+#!/bin/bash
+
+# Create the main directory 'projectFiles'
+mkdir projectFiles
+
+# Enter the 'projectFiles' directory
+cd projectFiles
+
+# Create the subdirectories 'source', 'data', and 'results'
+mkdir source data results
+
+# Optional: Print a success message
+echo "The directories 'source', 'data', and 'results' have been created inside 'projectFiles'."

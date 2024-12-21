@@ -3,5 +3,11 @@
 #Date: September 16, 2024
 #This program prints numbers from 2 - 17
 
-for i in range(2,18):
-    print(i)
+#methods:
+#print(String s)
+#---
+#range(), range(start,stop), range(start,stop,step)
+
+for i in range(2,18):      #starts a for-loop at i = 2 , using the range() function till i = 18 not including 18 , highestNum = 17, iterations = 16 (highestNum+1-i)
+    print(i)      #prints i (int)
+

@@ -1,0 +1,73 @@
+#Name: Carey Jiang
+#Email: carey.jiang65@myhunter.cuny.edu
+#Date: December 18, 2024
+#This program prints "Hello World" in weMips
+  
+# This is a comment. Everything after a '#' is ignored by the simulator.
+
+# This is a comment. Everything after a '#' is ignored by the simulator.
+
+# Add -13 to the stack pointer to reserve space for the message and the null terminator
+ADDI $sp, $sp, -13  
+
+# Store each character of the message "Hello, World" in memory
+# 'H'
+LI $t0, 72           # Load ASCII value of 'H' (72) into $t0
+SB $t0, 0($sp)       # Store the byte (ASCII of 'H') at the stack pointer
+
+# 'e'
+LI $t0, 101          # Load ASCII value of 'e' (101) into $t0
+SB $t0, 1($sp)       # Store the byte (ASCII of 'e') at the next memory location
+
+# 'l'
+LI $t0, 108          # Load ASCII value of 'l' (108) into $t0
+SB $t0, 2($sp)       # Store the byte (ASCII of 'l') at the next memory location
+
+# 'l'
+LI $t0, 108          # Load ASCII value of 'l' (108) into $t0
+SB $t0, 3($sp)       # Store the byte (ASCII of 'l') at the next memory location
+
+# 'o'
+LI $t0, 111          # Load ASCII value of 'o' (111) into $t0
+SB $t0, 4($sp)       # Store the byte (ASCII of 'o') at the next memory location
+
+# ','
+LI $t0, 44           # Load ASCII value of ',' (44) into $t0
+SB $t0, 5($sp)       # Store the byte (ASCII of ',') at the next memory location
+
+# ' ' (space)
+LI $t0, 32           # Load ASCII value of space (32) into $t0
+SB $t0, 6($sp)       # Store the byte (ASCII of space) at the next memory location
+
+# 'W'
+LI $t0, 87           # Load ASCII value of 'W' (87) into $t0
+SB $t0, 7($sp)       # Store the byte (ASCII of 'W') at the next memory location
+
+# 'o'
+LI $t0, 111          # Load ASCII value of 'o' (111) into $t0
+SB $t0, 8($sp)       # Store the byte (ASCII of 'o') at the next memory location
+
+# 'r'
+LI $t0, 114          # Load ASCII value of 'r' (114) into $t0
+SB $t0, 9($sp)       # Store the byte (ASCII of 'r') at the next memory location
+
+# 'l'
+LI $t0, 108          # Load ASCII value of 'l' (108) into $t0
+SB $t0, 10($sp)      # Store the byte (ASCII of 'l') at the next memory location
+
+# 'd'
+LI $t0, 100          # Load ASCII value of 'd' (100) into $t0
+SB $t0, 11($sp)      # Store the byte (ASCII of 'd') at the next memory location
+
+# Null terminator (to mark the end of the string)
+LI $t0, 0            # Load 0 (null terminator) into $t0
+SB $t0, 12($sp)      # Store the null terminator at the next memory location
+
+# Set up for the syscall (to print the string)
+LI $v0, 4            # 4 is the syscall code for printing a string
+ADD $a0, $sp, $zero   # Load the address of the string (the stack pointer) into $a0
+
+# Perform the syscall to print the string
+SYSCALL              # Call the system call
+
+

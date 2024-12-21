@@ -1,0 +1,19 @@
+#Name: Carey Jiang
+#Email: carey.jiang65@myhunter.cuny.edu
+#Date: November 5, 2024
+#This programs creates a nandGate
+
+
+(False)
+------|
+      |
+  0   |------------------------|
+----- |                        |
+                               |        -------
+                               ------>  | AND | ----------> OUTPUT (False)
+------|                        |----->  |---- |
+      |                        |
+  0   |-------------------------
+----- |
+(False)
+
