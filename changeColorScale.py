@@ -4,6 +4,17 @@
 #The programs modifys the region of the map with elevation greater than 6 feet and less than or equal 20 feet above sea level to the color grey
 
 
+# methods:
+# np.loadtxt(String file)
+# .shape
+# np.zeros(shape)
+# plt.imshow
+# plt.show()
+# plt.imsave()
+# ---
+# input(String s)
+
+
 #Import the libraries for arrays and displaying images:
 import numpy as np
 import matplotlib.pyplot as plt
